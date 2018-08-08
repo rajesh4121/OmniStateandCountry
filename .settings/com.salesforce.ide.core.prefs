@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+eclipse.preferences.version=1
+endpointApiVersion=35.0
+endpointEnvironment=Sandbox
+endpointServer=test.salesforce.com
+httpsProtocol=true
+ideVersion=35.0
+keependpoint=false
+metadataFormatVersion=35.0
+namespacePrefix=
+packageName=unpackaged
+preferToolingDeployment=true
+projectIdentifier=IDE-2045005350951959700
+readTimeout=400
+username=rajesh.c.singh@posten.com.postendev
+=======
+eclipse.preferences.version=1
+endpointApiVersion=35.0
+endpointEnvironment=Sandbox
+endpointServer=test.salesforce.com
+httpsProtocol=true
+ideVersion=35.0
+keependpoint=false
+metadataFormatVersion=35.0
+namespacePrefix=
+packageName=unpackaged
+preferToolingDeployment=true
+projectIdentifier=IDE8884357446943916457
+readTimeout=400
+username=rajesh.c.singh@posten.com.postendev
+>>>>>>> branch 'Developer-Sandbox' of https://github.com/bring/npb-crm
