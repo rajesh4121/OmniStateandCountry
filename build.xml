@@ -1,0 +1,39 @@
+<project name="Posten - Force Migration Tool" default="deployFromGitToDEV" basedir="." xmlns:sf="antlib:com.salesforce">
+
+		<property file="build.properties"/>
+		<property environment="env"/>
+
+		<!-- ADD MIGRATION TOOL TO ANT -->
+		<path id="sf.classpath">
+			<fileset dir="lib">
+				<include name="ant-salesforce.jar"/>
+			</fileset>
+		</path>
+		<typedef uri="antlib:com.salesforce" classpathref="sf.classpath" />		
+
+	
+
+		<!-- DEPLOY FROM BUILD TO DEV -->
+		<target name="deployFromGitToDEV">
+			<antcall target="deployFromBuild">
+				<param name="username" value="${sf.DEVusername}"/>
+				<param name="password" value="${sf.DEVpassword}"/>
+				<param name="securityToken" value="${sf.DEVsecurityToken}"/>
+				<param name="serverurl" value="${sf.testServerurl}"/>
+			</antcall>
+		</target>
+		
+	
+		<target name="deployFromBuild">
+      		<sf:deploy 
+      			username="${username}"
+      			password="${password}${securityToken}"
+      			serverurl="${serverurl}" 
+      			maxPoll="${sf.maxPoll}" 
+      			deployRoot="src"       			
+      			rollbackOnError="true" 
+      			testLevel="RunLocalTests">					
+			</sf:deploy> 
+		</target> 
+
+	</project>
